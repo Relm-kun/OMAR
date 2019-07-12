@@ -1,0 +1,32 @@
+SCHEMA omar
+LAYOUT 
+TABLE
+{
+ ID       Mach-Make  Mach-Model  Mach-Type  OS-ID  Mach-CPU  Mach-RAM  Mach-HDD  Mach-Purchased  Mach-Active
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+[f001    |f002      |f003       |f004      |f005  |f006     |f007     |f008     |f009           |f010        ]
+} 
+END
+END
+TABLES
+  machine_list 
+END
+ATTRIBUTES
+  f001 = machine_list.id ;
+  f002 = machine_list.mach_make ;
+  f003 = machine_list.mach_model ;
+  f004 = machine_list.mach_type ;
+  f005 = machine_list.os_id ;
+  f006 = machine_list.mach_cpu ;
+  f007 = machine_list.mach_ram ;
+  f008 = machine_list.mach_hdd ;
+  f009 = machine_list.mach_purchased ;
+  f010 = machine_list.mach_active ;
+END
+INSTRUCTIONS
+  SCREEN RECORD sr_mach( machine_list.* );
+END

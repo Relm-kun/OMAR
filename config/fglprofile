@@ -1,0 +1,2 @@
+dbi.default.driver = "dbmsqt"
+dbi.database.omar.source = "omar.db"

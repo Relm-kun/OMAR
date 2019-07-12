@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="pine" build="3.20.05" sqlDbName="omar" width="110" height="7">
+  <Grid>
+    <Table gridWidth="110" gridHeight="7" pageSize="6" tabName="sr_mach">
+      <TableColumn text="ID" name="machine_list.id" colName="id" sqlType="INTEGER" required="1" notNull="1" fieldId="0" sqlTabName="machine_list" tabIndex="1" numAlign="1">
+        <Edit width="8"/>
+      </TableColumn>
+      <TableColumn text="Mach-Make" name="machine_list.mach_make" colName="mach_make" sqlType="VARCHAR(16)" required="1" notNull="1" fieldId="1" sqlTabName="machine_list" tabIndex="2">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn text="Mach-Model" name="machine_list.mach_model" colName="mach_model" sqlType="VARCHAR(32)" required="1" notNull="1" fieldId="2" sqlTabName="machine_list" tabIndex="3">
+        <Edit width="11"/>
+      </TableColumn>
+      <TableColumn text="Mach-Type" name="machine_list.mach_type" colName="mach_type" sqlType="VARCHAR(16)" required="1" notNull="1" fieldId="3" sqlTabName="machine_list" tabIndex="4">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn text="OS-ID" name="machine_list.os_id" colName="os_id" sqlType="INTEGER" required="1" notNull="1" fieldId="4" sqlTabName="machine_list" tabIndex="5" numAlign="1">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn text="Mach-CPU" name="machine_list.mach_cpu" colName="mach_cpu" sqlType="VARCHAR(32)" required="1" notNull="1" fieldId="5" sqlTabName="machine_list" tabIndex="6">
+        <Edit width="9"/>
+      </TableColumn>
+      <TableColumn text="Mach-RAM" name="machine_list.mach_ram" colName="mach_ram" sqlType="INTEGER" required="1" notNull="1" fieldId="6" sqlTabName="machine_list" tabIndex="7" numAlign="1">
+        <Edit width="9"/>
+      </TableColumn>
+      <TableColumn text="Mach-HDD" name="machine_list.mach_hdd" colName="mach_hdd" sqlType="INTEGER" required="1" notNull="1" fieldId="7" sqlTabName="machine_list" tabIndex="8" numAlign="1">
+        <Edit width="9"/>
+      </TableColumn>
+      <TableColumn text="Mach-Purchased" name="machine_list.mach_purchased" colName="mach_purchased" sqlType="DATETIME YEAR TO SECOND" required="1" notNull="1" fieldId="8" sqlTabName="machine_list" tabIndex="9">
+        <Edit width="15"/>
+      </TableColumn>
+      <TableColumn text="Mach-Active" name="machine_list.mach_active" colName="mach_active" sqlType="BOOLEAN" required="1" notNull="1" fieldId="9" sqlTabName="machine_list" tabIndex="10" numAlign="1">
+        <Edit width="12"/>
+      </TableColumn>
+    </Table>
+  </Grid>
+  <RecordView tabName="machine_list">
+    <Link colName="id" fieldIdRef="0"/>
+    <Link colName="mach_make" fieldIdRef="1"/>
+    <Link colName="mach_model" fieldIdRef="2"/>
+    <Link colName="mach_type" fieldIdRef="3"/>
+    <Link colName="os_id" fieldIdRef="4"/>
+    <Link colName="mach_cpu" fieldIdRef="5"/>
+    <Link colName="mach_ram" fieldIdRef="6"/>
+    <Link colName="mach_hdd" fieldIdRef="7"/>
+    <Link colName="mach_purchased" fieldIdRef="8"/>
+    <Link colName="mach_active" fieldIdRef="9"/>
+  </RecordView>
+</Form>

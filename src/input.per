@@ -1,0 +1,49 @@
+LAYOUT ( MINWIDTH=50, MINHEIGHT=40, STYLE="main" )
+VBOX 
+GROUP (TEXT="")
+GRID
+{
+["ID:"                    ]
+[id                       ]
+["Machine Make:"          ]
+[mach_make                ]
+["Machine Model:"         ]
+[mach_model               ]
+["Machine Type:"          ]
+[mach_type                ]
+["OS ID:"                 ]
+[os_id                    ]
+["Machine CPU:"           ]
+[mach_cpu                 ]
+["Machine RAM:"           ]
+[mach_ram                 ]
+["Machine HDD:"           ]
+[mach_hdd                 ]
+["Machine Purchased:"     ]
+[mach_purchased           ]
+[mach_active              ]
+[spacer                   ]
+[bt_input                 ]
+[bt_exit                  ]
+}
+END
+END #GROUP
+END #VBOX
+END #LAYOUT
+
+ATTRIBUTES
+EDIT id=FORMONLY.id, PLACEHOLDER="id", JUSTIFY=CENTER, NOENTRY;
+EDIT mach_make=FORMONLY.mach_make, PLACEHOLDER="Machine Make", JUSTIFY=CENTER;
+EDIT mach_model=FORMONLY.mach_model, PLACEHOLDER=%"Machine Model", JUSTIFY=CENTER;
+EDIT mach_type=FORMONLY.mach_type, PLACEHOLDER="Machine Type", JUSTIFY=CENTER;
+EDIT os_id=FORMONLY.os_id, PLACEHOLDER="OS_ID", JUSTIFY=CENTER;
+EDIT mach_cpu=FORMONLY.mach_cpu, PLACEHOLDER="Machine CPU", JUSTIFY=CENTER;
+EDIT mach_ram=FORMONLY.mach_ram, PLACEHOLDER="Machine RAM", JUSTIFY=CENTER;
+EDIT mach_hdd=FORMONLY.mach_hdd, PLACEHOLDER=%"Machine HDD", JUSTIFY=CENTER;
+DATETIMEEDIT mach_purchased=FORMONLY.mach_purchased, PLACEHOLDER=%"Machine Purchased", JUSTIFY=CENTER;
+CHECKBOX mach_active=FORMONLY.mach_active, REQUIRED,VALUECHECKED="1", VALUEUNCHECKED="0", TEXT=%"Still Active?";
+TEXTEDIT spacer=FORMONLY.spacer, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED,STRETCH=BOTH, STYLE="noBorder";
+BUTTON bt_input : bt_input, TEXT="Input";
+BUTTON bt_exit : bt_exit, TEXT="Exit";
+
+END

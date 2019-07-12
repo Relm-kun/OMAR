@@ -1,0 +1,58 @@
+SCHEMA omar
+LAYOUT ( MINWIDTH=50, MINHEIGHT=40, STYLE="main" )
+VBOX 
+GROUP (TEXT="")
+GRID
+{
+["ID:"                    ]
+[id                       ]
+["Machine Make:"          ]
+[mach_make                ]
+["Machine Model:"         ]
+[mach_model               ]
+["Machine Type:"          ]
+[mach_type                ]
+["OS ID:"                 ]
+[os_id                    ]
+["Machine CPU:"           ]
+[mach_cpu                 ]
+["Machine RAM:"           ]
+[mach_ram                 ]
+["Machine HDD:"           ]
+[mach_hdd                 ]
+["Machine Purchased:"     ]
+[mach_purchased           ]
+[mach_active              ]
+[spacer                   ]
+[  bt_back  ] [  bt_next  ]
+[bt_exit                  ]
+}
+END
+END #GROUP
+END #VBOX
+END #LAYOUT
+TABLES
+  machine_list
+END
+ATTRIBUTES
+id = machine_list.id ;
+mach_make = machine_list.mach_make ;
+mach_model = machine_list.mach_model ;
+mach_type = machine_list.mach_type ;
+os_id = machine_list.os_id ;
+mach_cpu = machine_list.mach_cpu ;
+mach_ram = machine_list.mach_ram ;
+mach_hdd = machine_list.mach_hdd ;
+mach_purchased = machine_list.mach_purchased ;
+mach_active = machine_list.mach_active ;
+
+TEXTEDIT spacer=FORMONLY.spacer, NOENTRY, SCROLLBARS=NONE, SIZEPOLICY=FIXED,STRETCH=BOTH, STYLE="noBorder";
+BUTTON bt_next : bt_next, TEXT="Next";
+BUTTON bt_back : bt_back, TEXT="Back";
+BUTTON bt_exit : bt_exit, TEXT="Exit";
+
+END
+
+INSTRUCTIONS
+  SCREEN RECORD sr_mach(machine_list.* );
+END

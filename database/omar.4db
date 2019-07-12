@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Schema gstVersion="31405" id="{9f2affff-4fbc-412e-a013-0bb4be6616bd}" version="4.0">
+  <AGSettings version="1.1">
+    <DynamicProperties version="2">
+      <DynamicProperty description="Associated label when generating form" initialValue="" isDefaultInherited="false" isHidden="false" label="Label" name="label" readOnly="false" type="TEXT"/>
+      <DynamicProperty description="Associated widget" editorInfo="contains:ButtonEdit|CheckBox|ComboBox|DateEdit|DateTimeEdit|Edit|FFImage|FFLabel|Field|Phantom|ProgressBar|RadioGroup|Slider|SpinEdit|TextEdit|TimeEdit" initialValue="Edit" isDefaultInherited="false" isHidden="false" label="Widget" name="widget" readOnly="false" type="ENUM"/>
+      <DynamicPropertyGroup collapsed="false" description="Formfied properties" label="Formfield" name="formfieldGroup" properties="label;widget"/>
+    </DynamicProperties>
+    <NodeInfos version="1">
+      <NodeInfo mimeType="db/column" properties="widget;label"/>
+    </NodeInfos>
+  </AGSettings>
+  <ExtractionSettings last="SQLite">
+    <ExtractionOptions casens="LowerCase" cvmeth="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ignerr="true" systab="false" type="SQLite"/>
+  </ExtractionSettings>
+  <Table active="true" name="machine_list" status="U" uuid="db/table2">
+    <Column fglLength="4" fglType="2" name="id" notNull="true" order="1" status="U" uuid="db/column2"/>
+    <Column fglLength="16" fglType="201" name="mach_make" notNull="true" order="2" status="U" uuid="db/column4"/>
+    <Column fglLength="32" fglType="201" name="mach_model" notNull="true" order="3" status="U" uuid="db/column6"/>
+    <Column fglLength="16" fglType="201" name="mach_type" notNull="true" order="4" status="U" uuid="db/column8"/>
+    <Column fglLength="4" fglType="2" name="os_id" notNull="true" order="5" status="U" uuid="db/column10"/>
+    <Column fglLength="32" fglType="201" name="mach_cpu" notNull="true" order="6" status="U" uuid="db/column12"/>
+    <Column fglLength="4" fglType="2" name="mach_ram" notNull="true" order="7" status="U" uuid="db/column14"/>
+    <Column fglLength="4" fglType="2" name="mach_hdd" notNull="true" order="8" status="U" uuid="db/column16"/>
+    <Column fglLength="3594" fglType="10" name="mach_purchased" notNull="true" order="9" status="U" uuid="db/column18"/>
+    <Column fglLength="1" fglType="45" name="mach_active" notNull="true" order="10" status="U" uuid="db/column20"/>
+    <Index indexColumns="id" indexConstraint="primaryKey" name="sqlite_autoindex_machine_list_1" status="U" uuid="db/index2"/>
+  </Table>
+  <Table active="true" name="os_list" status="U" uuid="db/table4">
+    <Column fglLength="4" fglType="2" name="id" notNull="true" order="1" status="U" uuid="db/column22"/>
+    <Column fglLength="16" fglType="201" name="os_type" notNull="true" order="2" status="U" uuid="db/column24"/>
+    <Column fglLength="128" fglType="201" name="os_distro" notNull="true" order="3" status="U" uuid="db/column26"/>
+    <Column fglLength="3000" fglType="201" name="os_download" notNull="true" order="4" status="U" uuid="db/column28"/>
+    <Index indexColumns="id" indexConstraint="primaryKey" name="sqlite_autoindex_os_list_1" status="U" uuid="db/index4"/>
+  </Table>
+  <ForeignKey cascadeDelete="false" fkColumns="os_id" fkRefColumns="id" name="fk_machine_list_os_list_0" refTable="os_list" status="U" table="machine_list" uuid="db/foreignkey2"/>
+  <Views ActiveView="View-1" showLabels="true">
+    <View Name="View-1">
+      <Layout>
+        <![CDATA[AAAAAgAAABIAZABiAC8AdABhAGIAbABlADIAAAAAAAAAAEA0AAAAAAAAAAAAAAAAAAABAAAAEgBkAGIALwB0AGEAYgBsAGUANECF2AAAAAAAQDMAAAAAAAA/gGJN0vGp/AE=]]>
+      </Layout>
+    </View>
+  </Views>
+</Schema>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="display" build="3.20.05" sqlDbName="omar" minWidth="50" minHeight="40" style="main" width="27" height="22">
+  <VBox>
+    <Group text="">
+      <Grid width="27" height="22">
+        <HBox posY="0" posX="1" gridWidth="25">
+          <Label text="ID:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.id" colName="id" sqlType="INTEGER" required="1" notNull="1" fieldId="0" sqlTabName="machine_list" tabIndex="1">
+          <Edit width="25" posY="1" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="2" posX="1" gridWidth="25">
+          <Label text="Machine Make:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_make" colName="mach_make" sqlType="VARCHAR(16)" required="1" notNull="1" fieldId="1" sqlTabName="machine_list" tabIndex="2">
+          <Edit width="25" posY="3" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="4" posX="1" gridWidth="25">
+          <Label text="Machine Model:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_model" colName="mach_model" sqlType="VARCHAR(32)" required="1" notNull="1" fieldId="2" sqlTabName="machine_list" tabIndex="3">
+          <Edit width="25" posY="5" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="6" posX="1" gridWidth="25">
+          <Label text="Machine Type:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_type" colName="mach_type" sqlType="VARCHAR(16)" required="1" notNull="1" fieldId="3" sqlTabName="machine_list" tabIndex="4">
+          <Edit width="25" posY="7" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="8" posX="1" gridWidth="25">
+          <Label text="OS ID:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.os_id" colName="os_id" sqlType="INTEGER" required="1" notNull="1" fieldId="4" sqlTabName="machine_list" tabIndex="5">
+          <Edit width="25" posY="9" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="10" posX="1" gridWidth="25">
+          <Label text="Machine CPU:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_cpu" colName="mach_cpu" sqlType="VARCHAR(32)" required="1" notNull="1" fieldId="5" sqlTabName="machine_list" tabIndex="6">
+          <Edit width="25" posY="11" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="12" posX="1" gridWidth="25">
+          <Label text="Machine RAM:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_ram" colName="mach_ram" sqlType="INTEGER" required="1" notNull="1" fieldId="6" sqlTabName="machine_list" tabIndex="7">
+          <Edit width="25" posY="13" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="14" posX="1" gridWidth="25">
+          <Label text="Machine HDD:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_hdd" colName="mach_hdd" sqlType="INTEGER" required="1" notNull="1" fieldId="7" sqlTabName="machine_list" tabIndex="8">
+          <Edit width="25" posY="15" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="16" posX="1" gridWidth="25">
+          <Label text="Machine Purchased:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="machine_list.mach_purchased" colName="mach_purchased" sqlType="DATETIME YEAR TO SECOND" required="1" notNull="1" fieldId="8" sqlTabName="machine_list" tabIndex="9">
+          <Edit width="25" posY="17" posX="1" gridWidth="25"/>
+        </FormField>
+        <FormField name="machine_list.mach_active" colName="mach_active" sqlType="BOOLEAN" required="1" notNull="1" fieldId="9" sqlTabName="machine_list" tabIndex="10">
+          <Edit width="25" posY="18" posX="1" gridWidth="25"/>
+        </FormField>
+        <FormField name="formonly.spacer" colName="spacer" fieldId="10" sqlTabName="formonly" noEntry="1" tabIndex="11">
+          <TextEdit width="25" scrollBars="none" sizePolicy="fixed" stretch="both" style="noBorder" wantReturns="1" scroll="1" posY="19" posX="1" gridWidth="25"/>
+        </FormField>
+        <Button name="bt_back" width="11" text="Back" posY="20" posX="1" gridWidth="11" tabIndex="12"/>
+        <Button name="bt_next" width="11" text="Next" posY="20" posX="15" gridWidth="11" tabIndex="13"/>
+        <Button name="bt_exit" width="25" text="Exit" posY="21" posX="1" gridWidth="25" tabIndex="14"/>
+      </Grid>
+    </Group>
+  </VBox>
+  <RecordView tabName="machine_list">
+    <Link colName="id" fieldIdRef="0"/>
+    <Link colName="mach_make" fieldIdRef="1"/>
+    <Link colName="mach_model" fieldIdRef="2"/>
+    <Link colName="mach_type" fieldIdRef="3"/>
+    <Link colName="os_id" fieldIdRef="4"/>
+    <Link colName="mach_cpu" fieldIdRef="5"/>
+    <Link colName="mach_ram" fieldIdRef="6"/>
+    <Link colName="mach_hdd" fieldIdRef="7"/>
+    <Link colName="mach_purchased" fieldIdRef="8"/>
+    <Link colName="mach_active" fieldIdRef="9"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="spacer" fieldIdRef="10"/>
+  </RecordView>
+  <RecordView tabName="sr_mach">
+    <Link colName="id" fieldIdRef="0"/>
+    <Link colName="mach_make" fieldIdRef="1"/>
+    <Link colName="mach_model" fieldIdRef="2"/>
+    <Link colName="mach_type" fieldIdRef="3"/>
+    <Link colName="os_id" fieldIdRef="4"/>
+    <Link colName="mach_cpu" fieldIdRef="5"/>
+    <Link colName="mach_ram" fieldIdRef="6"/>
+    <Link colName="mach_hdd" fieldIdRef="7"/>
+    <Link colName="mach_purchased" fieldIdRef="8"/>
+    <Link colName="mach_active" fieldIdRef="9"/>
+  </RecordView>
+</Form>

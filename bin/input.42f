@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="input" build="3.20.05" minWidth="50" minHeight="40" style="main" width="27" height="22">
+  <VBox>
+    <Group text="">
+      <Grid width="27" height="22">
+        <HBox posY="0" posX="1" gridWidth="25">
+          <Label text="ID:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.id" colName="id" fieldId="0" sqlTabName="formonly" noEntry="1" tabIndex="1">
+          <Edit width="25" placeholder="id" justify="center" posY="1" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="2" posX="1" gridWidth="25">
+          <Label text="Machine Make:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_make" colName="mach_make" fieldId="1" sqlTabName="formonly" tabIndex="2">
+          <Edit width="25" placeholder="Machine Make" justify="center" posY="3" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="4" posX="1" gridWidth="25">
+          <Label text="Machine Model:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_model" colName="mach_model" fieldId="2" sqlTabName="formonly" tabIndex="3">
+          <Edit width="25" placeholder="Machine Model" justify="center" posY="5" posX="1" gridWidth="25">
+            <LStr placeholder="Machine Model"/>
+          </Edit>
+        </FormField>
+        <HBox posY="6" posX="1" gridWidth="25">
+          <Label text="Machine Type:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_type" colName="mach_type" fieldId="3" sqlTabName="formonly" tabIndex="4">
+          <Edit width="25" placeholder="Machine Type" justify="center" posY="7" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="8" posX="1" gridWidth="25">
+          <Label text="OS ID:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.os_id" colName="os_id" fieldId="4" sqlTabName="formonly" tabIndex="5">
+          <Edit width="25" placeholder="OS_ID" justify="center" posY="9" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="10" posX="1" gridWidth="25">
+          <Label text="Machine CPU:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_cpu" colName="mach_cpu" fieldId="5" sqlTabName="formonly" tabIndex="6">
+          <Edit width="25" placeholder="Machine CPU" justify="center" posY="11" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="12" posX="1" gridWidth="25">
+          <Label text="Machine RAM:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_ram" colName="mach_ram" fieldId="6" sqlTabName="formonly" tabIndex="7">
+          <Edit width="25" placeholder="Machine RAM" justify="center" posY="13" posX="1" gridWidth="25"/>
+        </FormField>
+        <HBox posY="14" posX="1" gridWidth="25">
+          <Label text="Machine HDD:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_hdd" colName="mach_hdd" fieldId="7" sqlTabName="formonly" tabIndex="8">
+          <Edit width="25" placeholder="Machine HDD" justify="center" posY="15" posX="1" gridWidth="25">
+            <LStr placeholder="Machine HDD"/>
+          </Edit>
+        </FormField>
+        <HBox posY="16" posX="1" gridWidth="25">
+          <Label text="Machine Purchased:"/>
+          <SpacerItem/>
+        </HBox>
+        <FormField name="formonly.mach_purchased" colName="mach_purchased" fieldId="8" sqlTabName="formonly" tabIndex="9">
+          <DateTimeEdit width="25" placeholder="Machine Purchased" justify="center" posY="17" posX="1" gridWidth="25">
+            <LStr placeholder="Machine Purchased"/>
+          </DateTimeEdit>
+        </FormField>
+        <FormField name="formonly.mach_active" colName="mach_active" fieldId="9" sqlTabName="formonly" required="1" tabIndex="10">
+          <CheckBox width="25" valueChecked="1" valueUnchecked="0" text="Still Active?" posY="18" posX="1" gridWidth="25">
+            <LStr text="Still Active?"/>
+          </CheckBox>
+        </FormField>
+        <FormField name="formonly.spacer" colName="spacer" fieldId="10" sqlTabName="formonly" noEntry="1" tabIndex="11">
+          <TextEdit width="25" scrollBars="none" sizePolicy="fixed" stretch="both" style="noBorder" wantReturns="1" scroll="1" posY="19" posX="1" gridWidth="25"/>
+        </FormField>
+        <Button name="bt_input" width="25" text="Input" posY="20" posX="1" gridWidth="25" tabIndex="12"/>
+        <Button name="bt_exit" width="25" text="Exit" posY="21" posX="1" gridWidth="25" tabIndex="13"/>
+      </Grid>
+    </Group>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="id" fieldIdRef="0"/>
+    <Link colName="mach_make" fieldIdRef="1"/>
+    <Link colName="mach_model" fieldIdRef="2"/>
+    <Link colName="mach_type" fieldIdRef="3"/>
+    <Link colName="os_id" fieldIdRef="4"/>
+    <Link colName="mach_cpu" fieldIdRef="5"/>
+    <Link colName="mach_ram" fieldIdRef="6"/>
+    <Link colName="mach_hdd" fieldIdRef="7"/>
+    <Link colName="mach_purchased" fieldIdRef="8"/>
+    <Link colName="mach_active" fieldIdRef="9"/>
+    <Link colName="spacer" fieldIdRef="10"/>
+  </RecordView>
+</Form>
